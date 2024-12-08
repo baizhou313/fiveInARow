@@ -82,3 +82,20 @@ body {
     background-color: white;
 }
 
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .controls {
+        flex-direction: row;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .controls button {
+        margin: 0 10px;
+    }
+}
