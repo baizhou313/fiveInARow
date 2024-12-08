@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* 父容器样式 */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 20px; /* 上下和左右的内边距 */
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* 控制面板样式 */
+.controls {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px; /* 控制面板与棋盘之间的间距 */
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* 按钮背景色 */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #45a049; /* 按钮悬停时的背景色 */
+}
+
+/* 棋盘样式 */
+.board {
+    display: grid;
+    grid-template-columns: repeat(15, 40px);
+    grid-template-rows: repeat(15, 40px);
+    gap: 1px;
+    width: fit-content;
+    background-color: #333;
+    border: 2px solid #8B4513;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #f5deb3; /* 棋盘格子颜色 */
+    cursor: pointer;
+    position: relative;
+}
+
+.cell:hover {
+    background-color: #ffe4b5;
+}
+
+/* 棋子样式 */
+.cell::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    top: 2px;
+    left: 2px;
+}
+
+.cell.black::after {
+    background-color: black;
+}
+
+.cell.white::after {
+    background-color: white;
+}
+
